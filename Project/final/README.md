@@ -93,50 +93,6 @@ A model class handles all model related operations. It responsible for loading t
 The camera is part of the player class. It uses the player's position and rotation to place itself in the world and look in the correct direction. The header for the camera has some constants which allows us to offset the position and rotation of the camera for a better experience.
 
 
-# Current state
-
-At the moment, the program has no makefile. It is possible to be run, but there has been no tests if it does. We have only been working on the backend of it, i.e we have just implemented the engines and are working on integrating it all together.
-
-
-# Next step
-
-
-## Overlay and UI
-
-We need a way to draw 2D objects relative to the viewport and unrelated to the global coordinates. I believe that `glutOverlayDisplayFunc` would be the best solution for this, but we need some more research in how to use it.
-
-
-### Main Menu
-
--   State "CANCELLED"  from              <span class="timestamp-wrapper"><span class="timestamp">[2020-12-07 Mon 02:15] </span></span>
-    Not enough time implement a main menu. Requires to define game states.
-
-A main menu would used to select and load specific level.
-
-
-### In-game menu
-
-This the menu that will allow the user to quit, resume, etc. It is used to pause the game.
-
-
-### Colour selector
-
-A menu that can be called mid-game to change the colour of the world.
-
-
-## Drawing textures
-
--   Store textures
-
-
-## Special colliders
-
-
-### Collider to indicate end location of the level
-
-This is not a visible part of the world. Simply a volume where, if the player collides with it, indicates the completion of the level.
-
-
 # Developers
 
 -   Omar Alkersh
