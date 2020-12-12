@@ -19,7 +19,11 @@
 
 ////////////////////////////  Game Controller data  ////////////////////////////
 
-GameController::GameController() : p{Model{"models/player.obj", "textures/player.png"}}, lives(3) {}
+using std::cout;
+using std::endl;
+
+GameController::GameController()
+    : p{Model{"models/player.obj", "textures/player.png"}}, lives(3) {}
 
 GameController &GameController::getInstance() {
   static GameController gc;
@@ -43,15 +47,16 @@ void GameController::setGameState(bool newState) { gameRunning = newState; }
 
 void GameController::killPlayer() {
   lives--;
+  cout << "Player Died. Remaining lives: " << lives << endl;
   if (lives <= 0){
-    std::cout << "Game over" << std::endl;
+    cout << "Game over" << endl;
     exit(0);
   }
   loadCheckpoint();
 }
 
 void GameController::endGame() {
-  std::cout << "Game finished!" << std::endl;
+  cout << "Game finished!" << endl;
   exit(0);
 }
 
