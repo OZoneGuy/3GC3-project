@@ -30,9 +30,10 @@
     Use ~make~ to compile the program or ~make run~ to compile and run. Must be used in the same location as this README.
 ** Known issues
    - The model scales are horrible
-   - The player model has some detection issues
+   - There are some issues with the collision resolving algorithm due to floating point arithmetic.
 
-     Does not follow model guidelines for the project, thus is causing collision resolving issues. A simple cuboid does not cause these issues.
+     The algorithm cannot properly calculate the norm or fully exit the colliding object within a factor of 10^{-2}.
+
    - The textures do not render
 ** Controls
 
